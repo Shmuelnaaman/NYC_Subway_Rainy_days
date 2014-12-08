@@ -1,4 +1,4 @@
-NYC_Subway
+NYC_Subway_Rainy_days
 ==========
 
 This function run a SQL query on a dataframe of
