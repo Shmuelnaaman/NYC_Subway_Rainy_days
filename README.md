@@ -1,4 +1,4 @@
-NYC_Subway_Rainy_days
+NYC_Subway_Weather 
 ==========
 
 In this mini project functions run a SQL query on a dataframe of
