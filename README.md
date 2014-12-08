@@ -1,4 +1,10 @@
 NYC_Subway
 ==========
 
-In this project, I look at the NYC Subway data and figure out if more people ride the subway when it is raining versus when it is not raining. I wrangle the NYC subway data, use statistical methods and data visualization to draw a conclusion about the subway dataset.
+This function run a SQL query on a dataframe of
+weather data.  The SQL query return one column and
+one row - a count of the number of days in the dataframe where
+the rain column is equal to 1.  
+The dataframe is title 'weather_data'.
+
+
