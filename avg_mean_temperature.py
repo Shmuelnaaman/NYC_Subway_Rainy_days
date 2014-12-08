@@ -13,6 +13,9 @@ def avg_mean_temperature(filename):
     
     You can see the weather data below:
     https://www.dropbox.com/s/7sf0yqc9ykpq3w8/weather_underground.csv
+        
+    To run this function type 
+    avg_mean_temperature('weather_underground.csv')
     '''
     weather_data = pandas.read_csv(filename)
 

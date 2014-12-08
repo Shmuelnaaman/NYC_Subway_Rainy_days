@@ -22,6 +22,9 @@ def max_temp_aggregate_by_fog(filename):
     WHERE cast(fog as integer) = 0 
     OR cast(fog as integer) = 1
     GROUP BY fog 
+        
+    To run this function type 
+    max_temp_aggregate_by_fog('weather_underground.csv')
     
     """
     

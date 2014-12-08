@@ -1,0 +1,53 @@
+import csv
+
+def fix_turnstile_data(filenames):
+    '''
+    Filenames is a list of MTA Subway turnstile text files.
+    
+    There are numerous data points included in each row of the
+    a MTA Subway turnstile text file. 
+
+    Here I write a function that will update each row in the text
+    file so there is only one entry per row. A few examples below:
+    A002,R051,02-00-00,05-28-11,00:00:00,REGULAR,003178521,001100739
+    A002,R051,02-00-00,05-28-11,04:00:00,REGULAR,003178541,001100746
+    A002,R051,02-00-00,05-28-11,08:00:00,REGULAR,003178559,001100775
+    
+    The updated data is than writen in to a different text file in the format of 
+    "updated_" + filename.
+    For example:
+        1) if you read in a text file called "turnstile_110521.txt"
+        2) you should write the updated data to "updated_turnstile_110521.txt"
+
+    The order of the fields preserved. 
+    
+    Sample input file:
+    https://www.dropbox.com/s/mpin5zv4hgrx244/turnstile_110528.txt
+    Sample updated file:
+    https://www.dropbox.com/s/074xbgio4c39b7h/solution_turnstile_110528.txt
+    
+     To run this function type     
+     fix_turnstile_data({'turnstile_110528.txt'})
+
+
+    '''
+    for name in filenames:
+        print name
+        with open(name, 'rb') as f:
+            reader = csv.reader(f)
+            for row in reader:
+                    header = row[0:3]
+                    
+                    rowclipped = row[len(header):]
+
+
+                    totallist = []
+                    with open("updated_" + name, 'ab') as fp:
+                        writer = csv.writer(fp)
+                       
+                        x = 0
+                        for i in range (len(rowclipped)/5):
+                            totallist = header + rowclipped[x:(x+5)]
+                            writer .writerow(totallist)
+
+                            x = x+5

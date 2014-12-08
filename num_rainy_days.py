@@ -16,6 +16,9 @@ def num_rainy_days(filename):
     
     weather data can be found :
     https://www.dropbox.com/s/7sf0yqc9ykpq3w8/weather_underground.csv
+
+    To run this function type 
+    num_rainy_days('weather_underground.csv')
     '''
     weather_data = pandas.read_csv(filename)
     

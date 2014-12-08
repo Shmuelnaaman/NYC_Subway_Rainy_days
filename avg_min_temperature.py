@@ -26,6 +26,10 @@ def avg_min_temperature(filename):
     WHERE cast(rain as integer) = 1
     AND cast(mintempi as integer) > 55
     GROUP BY cast(rain as integer) = 1    AND cast(mintempi as integer) > 55
+    
+    To run this function type 
+    avg_min_temperature('weather_underground.csv')
+
     """
     
     #Execute your SQL command against the pandas frame
